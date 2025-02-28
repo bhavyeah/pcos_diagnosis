@@ -10,7 +10,7 @@ These observations were made from the dataset:
 - The average BMI of a female with PCOS is 30.12
 - The average testosterone level of PCOS patients was 69.4
 - The average testosterone level in women without PCOS was 57.8
-- The average (AFC) or antral follicle count = 17.4 ng/dL 
+- The average (AFC) or antral follicle count of women in this dataset = 17.4 ng/dL 
 - Underweight women had the highest average AFC (20.0), whereas women with a normal BMI score had the lowest average AFC (16.9)
 
 Metrics to keep in mind:
