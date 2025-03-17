@@ -1,23 +1,51 @@
-# pcos_diagnosis
-This project analyses PCOS and non-PCOS patients using Python Pandas and SQL. The data was cleaned first using Pandas, then the cleaned file was uploaded into BigQuery for SQL analysis.
+# PCOS Prediction using Machine Learning & SQL
 
-These observations were made from the dataset:
-- A total of 1000 women were studied in this survey
-- The no. of females who do have PCOS is 199
-- the no. of females who do not have PCOS 801
-- Women who had menstrual irregularity were more likely to have PCOS
-- The average BMI of a female without PCOS is 25.45
-- The average BMI of a female with PCOS is 30.12
-- The average testosterone level of PCOS patients was 69.4
-- The average testosterone level in women without PCOS was 57.8
-- The average (AFC) or antral follicle count of women in this dataset = 17.4 ng/dL 
-- Underweight women had the highest average AFC (20.0), whereas women with a normal BMI score had the lowest average AFC (16.9)
+## Overview
+This project aims to analyze a dataset of 1000 women to identify key factors influencing PCOS (Polycystic Ovary Syndrome) and build machine learning models to predict PCOS diagnoses. SQL was used for initial data exploration, while Python-based ML models were developed for classification.
 
-Metrics to keep in mind:
-- average age = 31.7 (age range in dataset is from 18-45)
-- average BMI of this dataset = 26.3 (BMI range is from 18 to 35; a healthy BMI ranges between 18.5–24.9)
-- average testosterone of this dataset = 60.1 ng/dL (testosterone levels range from 20 to 100 ng/dL)
-- The average AFC of non-PCOS women was 16.79, whereas the average AFC of PCOS patients was 20.19
+## Dataset Summary
+- Total women studied: **1000**
+- Women diagnosed with PCOS: **199**
+- Women without PCOS: **801**
+- Key Observations:
+  - Women with menstrual irregularity were more likely to have PCOS.
+  - **Average BMI**: 30.12 (PCOS) vs. 25.45 (non-PCOS)
+  - **Average Testosterone Levels (ng/dL)**: 69.4 (PCOS) vs. 57.8 (non-PCOS)
+  - **Average Antral Follicle Count (AFC)**: 20.19 (PCOS) vs. 16.79 (non-PCOS)
 
-Dataset procured from Kaggle. 
-Link: https://www.kaggle.com/datasets/samikshadalvi/pcos-diagnosis-dataset
+## Technologies Used
+- **SQL (BigQuery)** for data exploration and analysis
+- **Python (Jupyter Notebook)** for ML modeling
+- **Scikit-Learn, XGBoost, Matplotlib, Seaborn** for data processing and visualization
+
+## SQL Data Exploration
+- Extracted PCOS prevalence and demographic insights
+- Analyzed the impact of BMI, testosterone, and AFC levels on PCOS
+- Aggregated statistics to guide ML feature selection
+
+## Machine Learning Models
+1. **Logistic Regression**
+2. **Random Forest**
+3. **XGBoost (Best performing model)**
+
+### Model Performance
+- **XGBoost achieved 100% accuracy** on both training and test sets, with consistent cross-validation scores.
+- Feature Importance Analysis (XGBoost):
+  - **Menstrual Irregularity** had the highest impact on PCOS diagnosis.
+  - BMI, AFC, and Testosterone levels were also significant contributors.
+
+## Overfitting Check
+- Cross-validation accuracy aligned closely with test accuracy, confirming model reliability.
+
+## Conclusion
+This project successfully identified key PCOS indicators and built an accurate predictive model. The combination of SQL analysis and ML models offers a strong data-driven approach to PCOS prediction.
+
+## Next Steps
+- Expand the dataset to validate findings on a larger population.
+- Implement model deployment for real-world usability.
+- Further optimize hyperparameters to improve generalizability.
+
+---
+📌 **Author:** Bhavya Jha  
+📌 **Tools Used:** BigQuery (SQL), Scikit-Learn, XGBoost, Matplotlib, Seaborn  
+📌 **Project Type:** Data Analysis + Machine Learning  
